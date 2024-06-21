@@ -60,3 +60,103 @@ a:hover {
   border-radius: 1em;
 }
 
+/* MAIN BODY STYLING */
+.Mainbody {
+  background-color: #B9CDDA;
+  margin: 30px; 
+  border-radius: 10px;
+}
+
+
+
+/* Container for buttons */
+.Mainbody > buttons {
+  display: inline-block; /* change to "inline-block" to see buttons in column */
+  align-items: center;
+}
+
+.buttons--toprow {
+  display: flex;
+}
+
+/* UPLOAD FILE BUTTON */
+input[type="file"]{
+ display: none;
+}
+
+.file-upload {
+  font-weight: 1000;
+  display: inline-block;
+  padding: 25px 12px;
+  margin: 20px 40px;
+  cursor: pointer;
+  background-color: #D9D9D9; 
+  color: black;
+  border: none;
+  border-radius: 4px;
+  box-shadow:  0px 4px 7.4px  grey;
+}
+.file-upload > img {
+  margin-left: 7px;
+  margin-right: 25px;
+}
+.file-upload:hover {
+  background-color: #b4b3b3; 
+}
+
+
+/* FIND A RECIPE button */
+
+.find-a-recipe {
+  font-weight: 1000;
+  display: inline-block;
+  padding: 25px 12px;
+  margin: 20px 40px;
+
+  width: 267px;
+  cursor: pointer;
+  background-color: #3C6154; 
+  color: white;
+  border-radius: 4px;
+  border: none;
+  box-shadow:  0px 4px 7.4px  grey;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.find-a-recipe:hover{
+  background-color: #29423a; 
+}
+
+
+/* SEARCH BAR */
+
+.input-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    background-color:  #D7DAE5;
+    border-radius: 15px;
+    min-width: 700px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input[type="text"] {
+    border: none;
+    outline: none;
+    background-color: #D7DAE5;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.input-box input[type="text"]::placeholder {
+    color: #3A3A3A;
+}
+
+.input-box > img {
+  margin: 5px;
+  background: #D7DAE5;
+}
