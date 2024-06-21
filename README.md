@@ -7,4 +7,4 @@ Simply type in or click on ingredients, and we'll find a recipe for you using th
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-*A better version of this is [Super Cook](https://supercook.com).
+*A better version of this is [Super Cook](https://supercook.com).*
