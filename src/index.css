@@ -1,4 +1,18 @@
-nav{
+* {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* src: url('src/fonts/Poppins/Poppins-Regular.ttf'); */
+  /* font-family: 'Playwrite New Zealand';
+  src: url('/fonts/Playwrite_AU_VIC/static/PlaywriteAUVIC-Regular.ttf'); */
+  /* font-family: 'Playwrite New Zealand';
+  src: url('/fonts/Playwrite_AU_VIC/static/PlaywriteAUVIC-Regular.ttf'); */
+}
+
+body {
+  margin: 0;
+  background-color: lightgoldenrodyellow;
+}
+  
+header, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,8 +23,7 @@ nav{
   box-shadow: 0px 9px 7.4px  grey;
 }
 
-
-nav > h3, nav > h4 {
+nav > h3, nav > h4, nav > p {
   margin: 0;
 }
 
@@ -19,8 +32,19 @@ nav > h4 {
   font-weight: 600;
 }
 
-nav > h3{
+header > p {
   color: black;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 2em;
+}
+
+a { 
+  color: rgba(100, 100, 100, 0.9);
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+a:hover {
+  color: rbg();
 }
