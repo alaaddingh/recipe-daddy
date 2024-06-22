@@ -65,6 +65,7 @@ a:hover {
 
 /* MAIN BODY STYLING */
 .Mainbody {
+  height: 100vh;
   display: flex;
   flex-direction: row;
   background-color: #B9CDDA;
@@ -74,8 +75,16 @@ a:hover {
 }
 
 /* FOCUS AREA */
+.focusArea {
+  width: 82%;
+}
 
 /* SIDEBAR */
+.sideBar {
+  min-width: fit-content;
+  /* width: 18%; */
+  margin-right: 18px;
+}
 
 /* Container for buttons */
 .Mainbody > buttons {
@@ -94,10 +103,12 @@ input[type="file"] {
 }
 
 .file-upload {
+  text-align: center;
+  min-width: 9em;
+  /* height: 15em; */
   font-weight: 1000;
-  display: inline-block;
-  padding: 25px 12px;
-  /* margin: 20px 40px; */
+  display: block;
+  margin-bottom: 15px;
   cursor: pointer;
   background-color: #D9D9D9;
   color: black;
@@ -115,22 +126,29 @@ input[type="file"] {
   background-color: #b4b3b3;
 }
 
+.file-upload > p {
+  margin-bottom: 0;
+}
 
-/* FIND A RECIPE button */
+.file-upload-content {
+  padding: 15% 0 15% 0;
+}
+
+
+/* FIND A RECIPE BUTTON */
 
 .find-a-recipe {
-  font-weight: 1000;
   display: inline-block;
-  padding: 25px 12px;
-  /* margin: 20px 40px; */
-
-  width: 267px;
+  padding: 1.4em 2em;
+  /* margin: 5em 4em; */
+  min-width: 10%;
   cursor: pointer;
   background-color: #3C6154;
   color: white;
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 7.4px grey;
+  font-weight: 1000;
   font-size: 20px;
   font-style: italic;
 }
