@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './landing_page_comps/header'; 
-import Footer from './landing_page_comps/footer'; 
+import Header from './landing_page_comps/header';
+import Footer from './landing_page_comps/footer';
 import Upload from './landing_page_comps/file_upload';
 import Findrecipe from './landing_page_comps/find_recipe';
 import Searchbar from './landing_page_comps/search_bar';
@@ -14,14 +14,17 @@ function Landing() {
         <div>
             <Header />
             <div className='Mainbody'>
-                <buttons>
-                    <div className = "buttons--toprow">
+                <div className='sideBar'>
+                    <Findrecipe />
+                </div>
+                <div className='focusArea'>
                     <Upload />
                     <Searchbar />
+                </div>
+                <buttons>
+                    <div className="buttons--toprow">
                     </div>
-                    <Findrecipe />
                 </buttons>
-                
             </div>
             <Footer />
         </div>
