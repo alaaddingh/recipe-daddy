@@ -194,7 +194,7 @@ input[type="file"] {
 /* CHOSEN INGREDIENTS TEXT */
 .chosen-ingreds-text {
   display: flex;
-  margin-top: 2em;
+  margin-top: 2.5em;
   font-size: 8pt;
   justify-content: space-between;
 }
@@ -223,6 +223,13 @@ input[type="file"] {
   border-radius: 3em;
   font-size: pt;
   line-height: 19pt;
+  border: none;
+}
+
+.ingredient:hover {
+  background-color: grey;
+  cursor: pointer;
+  color: white;
 }
 
 .ingredient > p {

@@ -7,9 +7,9 @@ this needs to be upgraded to incorporate all the api stuff from spoontacular.
 
 function Ingredient({name}) {
     return (
-        <div className="ingredient">
+        <button className="ingredient">
             <p>{name}</p>
-        </div>
+        </button>
     )
 }
 
