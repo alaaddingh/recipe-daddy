@@ -7,6 +7,7 @@ import Upload from './landing_page_comps/file_upload';
 import Findrecipe from './landing_page_comps/find_recipe';
 import Searchbar from './landing_page_comps/search_bar';
 import Choseningredients from './landing_page_comps/chosen_ingredients';
+import Ingredientscontainer from './landing_page_comps/ingredients_container';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,11 +23,8 @@ function Landing() {
                 <div className='focusArea'>
                     <Upload />
                     <Searchbar />
+                    <Ingredientscontainer />
                 </div>
-                <buttons>
-                    <div className="buttons--toprow">
-                    </div>
-                </buttons>
             </div>
             <Footer />
         </div>
