@@ -5,7 +5,7 @@ import Header from './landing_page_comps/header';
 import Footer from './landing_page_comps/footer';
 import Upload from './landing_page_comps/file_upload';
 import Findrecipe from './landing_page_comps/find_recipe';
-import Searchbar from './landing_page_comps/search_bar';
+import SearchBar from './landing_page_comps/search_bar';
 import Choseningredients from './landing_page_comps/chosen_ingredients';
 import Ingredientscontainer from './landing_page_comps/ingredients_container';
 
@@ -22,7 +22,7 @@ function Landing() {
                 </div>
                 <div className='focusArea'>
                     <Upload />
-                    <Searchbar />
+                    <SearchBar />
                     <Ingredientscontainer />
                 </div>
             </div>
