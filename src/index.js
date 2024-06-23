@@ -6,6 +6,7 @@ import Footer from './landing_page_comps/footer';
 import Upload from './landing_page_comps/file_upload';
 import Findrecipe from './landing_page_comps/find_recipe';
 import Searchbar from './landing_page_comps/search_bar';
+import Choseningredients from './landing_page_comps/chosen_ingredients';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,6 +17,7 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Findrecipe />
+                    <Choseningredients />
                 </div>
                 <div className='focusArea'>
                     <Upload />

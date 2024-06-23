@@ -81,8 +81,8 @@ a:hover {
 
 /* SIDEBAR */
 .sideBar {
-  min-width: fit-content;
-  /* width: 18%; */
+  /* min-width: fit-content; */
+  max-width: 40%;
   margin-right: 18px;
 }
 
@@ -187,4 +187,45 @@ input[type="file"] {
 .input-box>img {
   margin: 5px;
   background: #D7DAE5;
+}
+
+
+
+/* CHOSEN INGREDIENTS TEXT */
+.chosen-ingreds-text {
+  display: flex;
+  margin-top: 2em;
+  font-size: 8pt;
+  justify-content: space-between;
+}
+
+.chosen-ingreds-text > p:nth-of-type(2) {
+  color: #416279;
+  font-style: italic;
+}
+.chosen-ingreds-text > p:nth-of-type(2):hover {
+  color: black;
+  cursor: pointer;
+}
+
+/* CHOSEN INGREDIENTS LIST ITEMS */
+.chosen-ingreds-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* INGREDIENT TILE */
+.ingredient {
+  background-color: white;
+  width: fit-content;
+  padding: 0 0.6em;
+  margin: 0.2em;
+  border-radius: 3em;
+  font-size: pt;
+  line-height: 19pt;
+}
+
+.ingredient > p {
+  margin: 0;
+  padding: 0;
 }
