@@ -2,29 +2,37 @@ import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa'; /* search icon from react icons */
 import "../../index.css";
 
-export const SearchBarInput = ({setResults}) => {
+// Replace 'YOUR_API_KEY' with your actual Spoonacular API key
+const API_KEY = '376053c399e94573b8ff03c5a97b16dd';
+const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 
-    const [input, setInput] = useState("")
+export const SearchBarInput = ({ setResults }) => {
+    const [input, setInput] = useState("");
 
     const fetchData = (value) => {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        if (value.trim() === "") {
+            setResults([]);
+            return;
+        }
+
+        const url = `${API_URL}?query=${encodeURIComponent(value)}&apiKey=${API_KEY}`;
+
+        fetch(url)
             .then((response) => response.json())
-            .then((json) => {
-                const results = json.filter((user) => {
-                    return (
-                        value &&
-                        user &&
-                        user.name &&
-                        user.name.toLowerCase().includes(value)
-                    )
-                });
+            .then((data) => {
+                console.log(JSON.stringify(data)); // Log the stringified JSON data
+                const results = data.results || [];
                 setResults(results);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+                setResults([]);
             });
     };
 
     const handleChange = (value) => {
-        setInput(value)
-        fetchData(value)
+        setInput(value);
+        fetchData(value);
     };
 
     return (
@@ -39,4 +47,3 @@ export const SearchBarInput = ({setResults}) => {
         </div>
     );
 };
-
