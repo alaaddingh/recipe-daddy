@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './landing_page_comps/header';
@@ -12,6 +12,8 @@ import Ingredientscontainer from './landing_page_comps/ingredients_container';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Landing() {
+    const [userInterestedInUpload, setUserInterestedInUpload] = useState(true);
+
     return (
         <div>
             <Header />
@@ -20,9 +22,9 @@ function Landing() {
                     <Findrecipe />
                     <Choseningredients />
                 </div>
-                <div className='focusArea'>
-                    <Upload />
-                    <SearchBarWrapper />
+                <div className={userInterestedInUpload ? 'focus-area focusOnUpload' : 'focus-area focus-on-search'} >
+                    <Upload isUploadBoxBig={userInterestedInUpload} />
+                    <SearchBarWrapper onInteraction={() => {setUserInterestedInUpload(false)}} focusOnUpload={userInterestedInUpload} />
                     <Ingredientscontainer />
                 </div>
             </div>

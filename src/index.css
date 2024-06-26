@@ -74,10 +74,20 @@ a:hover {
   padding: 20px;
 }
 
+
+
 /* FOCUS AREA */
-.focusArea {
+.focus-area {
   width: 82%;
 }
+
+.focus-area.focus-on-search { 
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+}
+
+
 
 /* SIDEBAR */
 .sideBar {
@@ -85,6 +95,9 @@ a:hover {
   max-width: 40%;
   margin-right: 18px;
 }
+
+
+
 
 /* Container for buttons */
 .Mainbody > buttons {
@@ -97,6 +110,8 @@ a:hover {
   display: flex;
 }
 
+
+
 /* UPLOAD FILE BUTTON */
 input[type="file"] {
   display: none;
@@ -105,10 +120,10 @@ input[type="file"] {
 .file-upload {
   text-align: center;
   min-width: 9em;
-  /* height: 15em; */
   font-weight: 1000;
   display: block;
   margin-bottom: 15px;
+  padding: 15% 0 15% 0;
   cursor: pointer;
   background-color: #D9D9D9;
   color: black;
@@ -117,22 +132,34 @@ input[type="file"] {
   box-shadow: 0px 4px 7.4px grey;
 }
 
-.file-upload > img {
-  margin-left: 7px;
-  margin-right: 25px;
+.file-upload.small {
+  margin-left: 18px;
+  padding: 0;
+  width: 10%;
+  height: 32px;
+  font-size: 10pt;
+  box-shadow: 0px 4px 7.4px rgba(1, 1, 1, 0.1);
+}
+
+.file-upload.small > p {
+  visibility: hidden;
+}
+
+.file-upload.small > img {
+  max-width: 10%;
+  margin: 0.5em;
 }
 
 .file-upload:hover {
   background-color: #b4b3b3;
+  cursor: pointer;
 }
 
 .file-upload > p {
   margin-bottom: 0;
 }
 
-.file-upload-content {
-  padding: 15% 0 15% 0;
-}
+
 
 
 /* FIND A RECIPE BUTTON */  
@@ -157,37 +184,42 @@ input[type="file"] {
 }
 
 
+
+
+
 /* SEARCH BAR */
+.search-bar-wrapper.foucs-on-upload {
+  width: 100%;
+}
+
+.search-bar-wrapper.focus-on-search { 
+  width: 90%;
+}
+
 .input-box {
+  color: black; /* changes the color of the search icon */
   display: flex;
   align-items: center;
-  width: auto;
+  /* width: auto; */
   height: 2em;
   padding: 0 0.5em;
   border: 1px solid black;
-  background-color: #D7DAE5;
+  background-color: #f7f8fd;
   border-radius: 6px;
   min-width: 2em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(152, 61, 61, 0.1);
 }
 
 .input-box input {
   border: none;
   outline: none;
-  background-color: #D7DAE5;
+  background-color: transparent;
   width: 100%;
   margin: 0 0.5em;
   font-size: 16px;
 }
 
-.input-box input::placeholder {
-  color: #3A3A3A;
-}
 
-/* .input-box > img {
-  margin: 5px;
-  background: #D7DAE5;
-} */
 
 
 
