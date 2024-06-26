@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../index.css";
 import uploadImg from '../images/upload_img.png';
 
-function Upload() {
+export default function Upload({isUploadBoxBig}) {
+
     return (
-        <form id="upload_form" action="/action_page.php">
-            <label htmlFor="myFile" className="file-upload">
-                <div className='file-upload-content'>
+        <form action="/action_page.php">
+            <label htmlFor="myFile" >
+                <div className={isUploadBoxBig ? 'file-upload large' : 'file-upload small'}>
                     <img src={uploadImg} width="20px" alt="upload" />
                     <p>Upload Photo of Fridge</p>
                 </div>
@@ -15,7 +16,3 @@ function Upload() {
         </form>
     );
 }
-
-
-
-export default Upload
