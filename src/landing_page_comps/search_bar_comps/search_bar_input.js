@@ -20,7 +20,7 @@ export const SearchBarInput = ({ setResults }) => {
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                console.log(JSON.stringify(data)); // Log the stringified JSON data
+                console.log(JSON.stringify(data));
                 const results = data.results || [];
                 setResults(results);
             })

@@ -1,12 +1,16 @@
-import React from "react";
-import '../index.css';
+import React from 'react';
+import ChosenIngredients from './chosen_ingredients';
+import ChosenIngredientsbuttons from './chosen_ingredients_buttons';
+import "../index.css"
 
-export default function Ingredientscontainer() {
+const IngredientsContainer = ({ selectedIngredients, clearIngredients }) => {
     return (
-        <div className="ingredients-container">
-            <div className="ingredients-category">
-
-            </div>
+        <div>
+           
+            <ChosenIngredientsbuttons clearIngredients={clearIngredients} />
+            <ChosenIngredients selectedIngredients={selectedIngredients} />
         </div>
-    )
-}
+    );
+};
+
+export default IngredientsContainer;

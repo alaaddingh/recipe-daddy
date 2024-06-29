@@ -194,9 +194,13 @@ input[type="file"] {
 /* CHOSEN INGREDIENTS TEXT */
 .chosen-ingreds-text {
   display: flex;
+  
+  color: green;
   margin-top: 2.5em;
   font-size: 8pt;
   justify-content: space-between;
+  
+  
 }
 
 .chosen-ingreds-text > p:nth-of-type(2) {
@@ -211,11 +215,12 @@ input[type="file"] {
 /* CHOSEN INGREDIENTS LIST ITEMS */
 .chosen-ingreds-list {
   display: flex;
-  flex-wrap: wrap;
+ /* flex-wrap: wrap; */
 }
 
 /* INGREDIENT TILE */
 .ingredient {
+  list-style-type: none;
   background-color: white;
   width: fit-content;
   padding: 0 0.6em;
@@ -243,3 +248,4 @@ input[type="file"] {
 .results-list:hover{
   cursor: pointer;
 }
+

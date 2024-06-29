@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../index.css";
 import { SearchResult } from "./search_result";
 
-export const SearchResultsList = ({ results }) => {
-    const [selectedIngredients, setSelectedIngredients] = useState(new Set());
-
-    const addIngredient = (ingredient) => {
-        setSelectedIngredients((prevIngredients) => new Set(prevIngredients).add(ingredient.name));
-    };
-
-
-    console.log(selectedIngredients);
+export const SearchResultsList = ({ results, addIngredient }) => {
     return (
         <div className='results-list'>
             {results.map((result, id) => (
@@ -20,14 +12,6 @@ export const SearchResultsList = ({ results }) => {
                     onClick={() => addIngredient(result)}
                 />
             ))}
-            <div>
-                <ul>
-                    {[...selectedIngredients].map((ingredientName, index) => (
-                        <li key={index}>{ingredientName}</li>
-                    ))}
-                </ul>
-            </div>
         </div>
     );
 };
-
