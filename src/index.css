@@ -87,7 +87,7 @@ a:hover {
 }
 
 /* Container for buttons */
-.Mainbody > buttons {
+.Mainbody>buttons {
   display: inline-block;
   /* change to "inline-block" to see buttons in column */
   align-items: center;
@@ -107,7 +107,6 @@ input[type="file"] {
 
 .file-upload {
   min-width: 10%;
-  /* height: ; */
   text-align: center;
   font-size: 9pt;
   display: block;
@@ -120,7 +119,7 @@ input[type="file"] {
   box-shadow: 0px 4px 7.4px grey;
 }
 
-.file-upload > img {
+.file-upload>img {
   max-width: 9%;
 }
 
@@ -128,7 +127,7 @@ input[type="file"] {
   background-color: #b4b3b3;
 }
 
-.file-upload > p {
+.file-upload>p {
   margin: 5px 0;
 }
 
@@ -138,7 +137,7 @@ input[type="file"] {
 
 
 
-/* FIND A RECIPE BUTTON */  
+/* FIND A RECIPE BUTTON */
 .find-a-recipe {
   display: inline-block;
   padding: 1.4em 2em;
@@ -197,29 +196,31 @@ input[type="file"] {
 /* CHOSEN INGREDIENTS TEXT */
 .chosen-ingreds-text {
   display: flex;
-  
-  color: green;
-  margin-top: 2.5em;
+  color: black;
+  margin-top: 7%;
   font-size: 8pt;
   justify-content: space-between;
-  
-  
 }
 
-.chosen-ingreds-text > p:nth-of-type(2) {
-  color: #416279;
+.chosen-ingreds-text>p:nth-of-type(2) {
+  color: #b23131;
   font-style: italic;
 }
-.chosen-ingreds-text > p:nth-of-type(2):hover {
-  color: black;
+
+.chosen-ingreds-text>p:nth-of-type(2):hover {
+  color: rgb(75, 21, 21);
   cursor: pointer;
 }
+
+
 
 /* CHOSEN INGREDIENTS LIST ITEMS */
 .chosen-ingreds-list {
   display: flex;
- /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
+
+
 
 /* INGREDIENT TILE */
 .ingredient {
@@ -240,7 +241,7 @@ input[type="file"] {
   color: white;
 }
 
-.ingredient > p {
+.ingredient>p {
   margin: 0;
   padding: 0;
 }
@@ -248,7 +249,6 @@ input[type="file"] {
 
 /* customizing results */
 
-.results-list:hover{
+.results-list:hover {
   cursor: pointer;
 }
-

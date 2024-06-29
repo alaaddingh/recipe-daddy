@@ -1,13 +1,13 @@
 import React from 'react';
 import "../index.css";
 
-const ChosenIngredientsbuttons = ({ clearIngredients }) => {
+const ChosenIngredientsButtons = ({ clearIngredients }) => {
     return (
         <div className="chosen-ingreds-text">
             <p>Your ingredients</p> 
-            <p onClick={clearIngredients} style={{ cursor: 'pointer', color: 'red' }}>Clear</p>
+            <p onClick={clearIngredients}>Clear</p>
         </div>
     );
 };
 
-export default ChosenIngredientsbuttons;
+export default ChosenIngredientsButtons;

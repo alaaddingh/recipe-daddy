@@ -4,11 +4,9 @@ import "../index.css";
 const ChosenIngredients = ({ selectedIngredients }) => {
     return (
         <div className="chosen-ingreds-list">
-            <ul>
                 {selectedIngredients.map((ingredientName, index) => (
-                    <li key={index} className="ingredient">{ingredientName}</li>
+                    <p key={index} className="ingredient">{ingredientName}</p>
                 ))}
-            </ul>
         </div>
     );
 };
