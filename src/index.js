@@ -32,6 +32,7 @@ function Landing() {
             <Header />
             <div className='Mainbody'>
                 <div className='sideBar'>
+                    <Upload />
                     <Findrecipe />
                     <IngredientsContainer
                         selectedIngredients={[...selectedIngredients]}
@@ -39,13 +40,12 @@ function Landing() {
                     />
                 </div>
                 <div className='focusArea'>
-                <Upload />
                     <SearchBarWrapper setResults={setResults} />
                     <SearchResultsList
                         results={results}
                         addIngredient={addIngredient}
                     />
-                  
+
                 </div>
             </div>
             <Footer />

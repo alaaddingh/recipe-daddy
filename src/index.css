@@ -97,16 +97,19 @@ a:hover {
   display: flex;
 }
 
+
+
+
 /* UPLOAD FILE BUTTON */
 input[type="file"] {
   display: none;
 }
 
 .file-upload {
+  min-width: 10%;
+  /* height: ; */
   text-align: center;
-  min-width: 9em;
-  /* height: 15em; */
-  font-weight: 1000;
+  font-size: 9pt;
   display: block;
   margin-bottom: 15px;
   cursor: pointer;
@@ -118,8 +121,7 @@ input[type="file"] {
 }
 
 .file-upload > img {
-  margin-left: 7px;
-  margin-right: 25px;
+  max-width: 9%;
 }
 
 .file-upload:hover {
@@ -127,12 +129,13 @@ input[type="file"] {
 }
 
 .file-upload > p {
-  margin-bottom: 0;
+  margin: 5px 0;
 }
 
-.file-upload-content {
-  padding: 15% 0 15% 0;
+.file-upload {
+  padding: 5% 0;
 }
+
 
 
 /* FIND A RECIPE BUTTON */  
