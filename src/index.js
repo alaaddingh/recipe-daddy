@@ -8,6 +8,8 @@ import Findrecipe from './landing_page_comps/find_recipe';
 import SearchBarWrapper from './landing_page_comps/search_bar_comps/search_bar_wrapper';
 import IngredientsContainer from './landing_page_comps/ingredients_container';
 import { SearchResultsList } from './landing_page_comps/search_bar_comps/search_results_list';
+import CommonIngredientsContainer from './landing_page_comps/common_ingredients_comps/common_ingredients_container';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -45,12 +47,12 @@ function Landing() {
                         results={results}
                         addIngredient={addIngredient}
                     />
-
+                    <CommonIngredientsContainer />
                 </div>
             </div>
             <Footer />
         </div>
     );
-}
+};
 
 root.render(<Landing />);

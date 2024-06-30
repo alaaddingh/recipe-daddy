@@ -247,8 +247,43 @@ input[type="file"] {
 }
 
 
-/* customizing results */
-
+/* RESULTS LIST */
 .results-list:hover {
   cursor: pointer;
+}
+
+
+
+
+/* COMMON INGREDIENTS CONTAINER */
+.common-ingredients-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #cce8f1; */
+  /* height: calc(100vh - 70px); */
+  /* border-radius: 8px; */
+  /* padding: 10px; */
+  margin: 10px 0;
+}
+
+
+
+/* COMMON INGREDIENTS CATEGORY */
+.common-ingredients-category {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 20vw;
+  height: 30vh;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px 10px 0 0;
+}
+
+.common-ingredients-category > p {
+  line-height: 12pt;
+  letter-spacing: 0.4pt;
+  background-color: #4b5552;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 0;
 }
