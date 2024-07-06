@@ -15,6 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
+    //initialization of set for ingredients
     const [results, setResults] = useState([]);
 
     const addIngredient = (ingredient) => {
@@ -35,7 +36,10 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
-                    <Findrecipe />
+
+                    <Findrecipe ingredients = {[...selectedIngredients]} /> 
+                
+                    
                     <IngredientsContainer
                         selectedIngredients={[...selectedIngredients]}
                         clearIngredients={clearIngredients}

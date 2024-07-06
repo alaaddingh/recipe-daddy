@@ -20,9 +20,10 @@ export const SearchBarInput = ({ setResults }) => {
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                console.log(JSON.stringify(data));
+               // console.log(JSON.stringify(data));
                 const results = data.results || [];
                 setResults(results);
+                console.log(results);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
