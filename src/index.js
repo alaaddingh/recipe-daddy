@@ -8,7 +8,7 @@ import Findrecipe from './landing_page_comps/find_recipe';
 import SearchBarWrapper from './landing_page_comps/search_bar_comps/search_bar_wrapper';
 import IngredientsContainer from './landing_page_comps/ingredients_container';
 import { SearchResultsList } from './landing_page_comps/search_bar_comps/search_results_list';
-import CommonIngredientsContainer from './landing_page_comps/common_ingredients_container';
+import CommonIngredientsContainer from './landing_page_comps/your_ingredients_comp/common_ingredients_container';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -36,14 +36,14 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
-
-                    <Findrecipe ingredients = {[...selectedIngredients]} /> 
-                
-                    
                     <IngredientsContainer
                         selectedIngredients={[...selectedIngredients]}
                         clearIngredients={clearIngredients}
                     />
+                    <Findrecipe ingredients = {[...selectedIngredients]} /> 
+                
+                    
+                   
                 </div>
                 <div className='focusArea'>
                     <SearchBarWrapper setResults={setResults} />

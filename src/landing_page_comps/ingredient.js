@@ -1,5 +1,6 @@
 import React from "react";
-import "../index.css"
+import "../index.css";
+
 
 /*
 this needs to be upgraded to incorporate all the api stuff from spoontacular.
