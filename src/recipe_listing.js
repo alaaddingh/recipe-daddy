@@ -1,3 +1,5 @@
+/* individual reciope listing */
+
 import React, { useState } from "react";
 import RecipeDetails from "./display_recipe";
 

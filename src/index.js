@@ -6,24 +6,29 @@ import Footer from './landing_page_comps/footer';
 import Upload from './landing_page_comps/file_upload';
 import Findrecipe from './landing_page_comps/find_recipe';
 import SearchBarWrapper from './landing_page_comps/search_bar_comps/search_bar_wrapper';
-import IngredientsContainer from './landing_page_comps/ingredients_container';
+import ChosenIngredientsContainer from './landing_page_comps/your_ingredients_comps/chosen_ingredients_container';
 import { SearchResultsList } from './landing_page_comps/search_bar_comps/search_results_list';
-import CommonIngredientsContainer from './landing_page_comps/your_ingredients_comp/common_ingredients_container';
+import CommonIngredientsContainer from './landing_page_comps/common_ingredients_container';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
-    //initialization of set for ingredients
     const [results, setResults] = useState([]);
-
+ 
     const addIngredient = (ingredient) => {
         setSelectedIngredients((prevIngredients) => {
             const newIngredients = new Set(prevIngredients);
             newIngredients.add(ingredient.name);
             return newIngredients;
         });
+    };
+
+    const removeIngredient = (ingredientName) => {
+        setSelectedIngredients((prevIngredients) => 
+            prevIngredients.filter(ingredient => ingredient !== ingredientName)
+        );
     };
 
     const clearIngredients = () => {
@@ -36,14 +41,12 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
-                    <IngredientsContainer
-                        selectedIngredients={[...selectedIngredients]}
+                    <ChosenIngredientsContainer
                         clearIngredients={clearIngredients}
+                        selectedIngredients={[...selectedIngredients]}
+                        removeIngredient={removeIngredient}
                     />
                     <Findrecipe ingredients = {[...selectedIngredients]} /> 
-                
-                    
-                   
                 </div>
                 <div className='focusArea'>
                     <SearchBarWrapper setResults={setResults} />
