@@ -9,7 +9,8 @@ const ChosenIngredients = ({ selectedIngredients, removeIngredient }) => {
                 <p
                     key={index}
                     className="ingredient"
-                    onClick={() => removeIngredient(ingredientName)}
+                    onClick={() => removeIngredient(ingredientName)} 
+                    // when clicked, the ingredientName is passed to the removeIngredient function in index.js
                 >
                     {ingredientName}
                 </p>

@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
     const [results, setResults] = useState([]);
- 
+
     const addIngredient = (ingredient) => {
         setSelectedIngredients((prevIngredients) => {
             const newIngredients = new Set(prevIngredients);
@@ -25,10 +25,16 @@ function Landing() {
         });
     };
 
+    // This function removes selected ingredients on click by passing the
+    // ingredient name to the removeIngredient function (name comes from chosen_ingredients.js)
+    // then we create a new Set from the old items, and then delete the given ingredient.
+    // Then pass the newIngredients Set to the setter function. 
     const removeIngredient = (ingredientName) => {
-        setSelectedIngredients((prevIngredients) => 
-            prevIngredients.filter(ingredient => ingredient !== ingredientName)
-        );
+        setSelectedIngredients((prevIngredients) => {
+            const newIngredients = new Set(prevIngredients);
+            newIngredients.delete(ingredientName); // Remove the ingredient by name
+            return newIngredients; // Return the updated Set to the setter function
+        });
     };
 
     const clearIngredients = () => {
@@ -46,7 +52,7 @@ function Landing() {
                         selectedIngredients={[...selectedIngredients]}
                         removeIngredient={removeIngredient}
                     />
-                    <Findrecipe ingredients = {[...selectedIngredients]} /> 
+                    <Findrecipe ingredients={[...selectedIngredients]} />
                 </div>
                 <div className='focusArea'>
                     <SearchBarWrapper setResults={setResults} />

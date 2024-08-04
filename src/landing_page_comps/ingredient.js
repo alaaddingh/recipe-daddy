@@ -14,7 +14,4 @@ function Ingredient({name}) {
     )
 }
 
-
-
-
 export default Ingredient
