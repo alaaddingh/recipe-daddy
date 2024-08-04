@@ -7,7 +7,7 @@ import "../../index.css"
 
 const ChosenIngredientsContainer = ({ clearIngredients, selectedIngredients, removeIngredient }) => {
     return (
-        <div>
+        <div className='chosen-ingreds-container'>
             <ChosenIngredientsButtons 
                 clearIngredients={clearIngredients} 
             />

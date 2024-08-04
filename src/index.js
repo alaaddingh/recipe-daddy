@@ -47,12 +47,12 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
+                    <Findrecipe ingredients={[...selectedIngredients]} />
                     <ChosenIngredientsContainer
                         clearIngredients={clearIngredients}
                         selectedIngredients={[...selectedIngredients]}
                         removeIngredient={removeIngredient}
                     />
-                    <Findrecipe ingredients={[...selectedIngredients]} />
                 </div>
                 <div className='focusArea'>
                     <SearchBarWrapper setResults={setResults} />
