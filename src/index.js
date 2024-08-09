@@ -4,18 +4,20 @@ import './index.css';
 import Header from './landing_page_comps/header';
 import Footer from './landing_page_comps/footer';
 import Upload from './landing_page_comps/file_upload';
-import Findrecipe from './landing_page_comps/find_recipe';
+import FindRecipe from './landing_page_comps/find_recipe';
 import SearchBarWrapper from './landing_page_comps/search_bar_comps/search_bar_wrapper';
 import ChosenIngredientsContainer from './landing_page_comps/your_ingredients_comps/chosen_ingredients_container';
 import { SearchResultsList } from './landing_page_comps/search_bar_comps/search_results_list';
 import CommonIngredientsContainer from './landing_page_comps/common_ingredients_container';
-
+import LoadingAnimation from './comps/loading_animation';
+import RecipeListings from './comps/recipe_listings';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
     const [results, setResults] = useState([]);
+    const [updateRecipeListings, setUpdateRecipeListings] = useState(false);
 
     const addIngredient = (ingredient) => {
         setSelectedIngredients((prevIngredients) => {
@@ -47,7 +49,7 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
-                    <Findrecipe ingredients={[...selectedIngredients]} />
+                    <FindRecipe setUpdateRecipeListings={setUpdateRecipeListings} />
                     <ChosenIngredientsContainer
                         clearIngredients={clearIngredients}
                         selectedIngredients={[...selectedIngredients]}
@@ -55,11 +57,13 @@ function Landing() {
                     />
                 </div>
                 <div className='focusArea'>
+                    {/* <LoadingAnimation /> */}
                     <SearchBarWrapper setResults={setResults} />
                     <SearchResultsList
                         results={results}
                         addIngredient={addIngredient}
                     />
+                    <RecipeListings updateRecipeListings={updateRecipeListings} selectedIngredients={[...selectedIngredients]}/>
                     <CommonIngredientsContainer />
                 </div>
             </div>
