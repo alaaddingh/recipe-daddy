@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
     const [results, setResults] = useState([]);
-    const [updateRecipeListings, setUpdateRecipeListings] = useState(false);
+    const [ShowRecipeListings, setShowRecipeListings] = useState(false);
 
     const addIngredient = (ingredient) => {
         setSelectedIngredients((prevIngredients) => {
@@ -49,7 +49,7 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
-                    <FindRecipe setUpdateRecipeListings={setUpdateRecipeListings} />
+                    <FindRecipe setShowRecipeListings={setShowRecipeListings} />
                     <ChosenIngredientsContainer
                         clearIngredients={clearIngredients}
                         selectedIngredients={[...selectedIngredients]}
@@ -63,7 +63,7 @@ function Landing() {
                         results={results}
                         addIngredient={addIngredient}
                     />
-                    <RecipeListings updateRecipeListings={updateRecipeListings} selectedIngredients={[...selectedIngredients]}/>
+                    <RecipeListings ShowRecipeListings={ShowRecipeListings} selectedIngredients={[...selectedIngredients]}/>
                     <CommonIngredientsContainer />
                 </div>
             </div>
