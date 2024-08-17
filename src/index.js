@@ -7,7 +7,6 @@ import Upload from './landing_page_comps/file_upload';
 import FindRecipe from './landing_page_comps/find_recipe';
 import SearchBarWrapper from './landing_page_comps/search_bar_comps/search_bar_wrapper';
 import ChosenIngredientsContainer from './landing_page_comps/your_ingredients_comps/chosen_ingredients_container';
-import { SearchResultsList } from './landing_page_comps/search_bar_comps/search_results_list';
 import CommonIngredientsContainer from './landing_page_comps/common_ingredients_container';
 import LoadingAnimation from './comps/loading_animation';
 import RecipeListings from './comps/recipe_listings';
@@ -16,7 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
-    const [results, setResults] = useState([]);
     const [ShowRecipeListings, setShowRecipeListings] = useState(false);
 
     const addIngredient = (ingredient) => {
@@ -58,11 +56,7 @@ function Landing() {
                 </div>
                 <div className='focusArea'>
                     {/* <LoadingAnimation /> */}
-                    <SearchBarWrapper setResults={setResults} />
-                    <SearchResultsList
-                        results={results}
-                        addIngredient={addIngredient}
-                    />
+                    <SearchBarWrapper addIngredient={addIngredient} /*setResults={setResults}*/ />
                     <RecipeListings ShowRecipeListings={ShowRecipeListings} selectedIngredients={[...selectedIngredients]}/>
                     <CommonIngredientsContainer />
                 </div>
