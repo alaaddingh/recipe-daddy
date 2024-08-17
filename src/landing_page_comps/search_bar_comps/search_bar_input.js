@@ -6,7 +6,7 @@ import "../../index.css";
 const API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // Carlos' api key
 const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 
-export const SearchBarInput = ({ setResults }) => {
+export const SearchBarInput = ({ setResults, setShowResultsList }) => {
     const [input, setInput] = useState("");
 
     const fetchData = (value) => {
@@ -20,7 +20,7 @@ export const SearchBarInput = ({ setResults }) => {
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-               // console.log(JSON.stringify(data));
+                // console.log(JSON.stringify(data));
                 const results = data.results || [];
                 setResults(results);
                 console.log(results);
@@ -44,6 +44,7 @@ export const SearchBarInput = ({ setResults }) => {
                 placeholder='Search for ingredients...'
                 value={input}
                 onChange={(e) => handleChange(e.target.value)}
+                onFocus={() => setShowResultsList(true)}
             />
         </div>
     );

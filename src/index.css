@@ -249,6 +249,23 @@ input[type="file"] {
   cursor: pointer;
 }
 
+.results-list {
+  position: absolute;
+  top: 20%;
+  background-color: white;
+  border-radius: 10px;
+  width: 72.6%;
+}
+
+.results-list > div {
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.results-list > div:hover {
+  background-color: #D9D9D9;
+}
+
 
 
 
