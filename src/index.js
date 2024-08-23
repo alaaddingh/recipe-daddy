@@ -10,12 +10,14 @@ import ChosenIngredientsContainer from './components/your_ingredients_comps/chos
 import CommonIngredientsContainer from './components/common_ingredients_container';
 import LoadingAnimation from './components/loading_animation';
 import RecipeListings from './components/recipe_listings';
+import Recipelisting from './components/recipe_listing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Landing() {
     const [selectedIngredients, setSelectedIngredients] = useState(new Set());
-    const [ShowRecipeListings, setShowRecipeListings] = useState(false);
+    const [showRecipeListings, setShowRecipeListings] = useState(false);
+    const [recipeListings, setRecipeListings] = useState([]);
 
     const addIngredient = (ingredient) => {
         setSelectedIngredients((prevIngredients) => {
@@ -47,7 +49,10 @@ function Landing() {
             <div className='Mainbody'>
                 <div className='sideBar'>
                     <Upload />
-                    <FindRecipe setShowRecipeListings={setShowRecipeListings} />
+                    <FindRecipe
+                        setShowRecipeListings={setShowRecipeListings}
+                        selectedIngredients={[...selectedIngredients]}
+                        setRecipeListings={setRecipeListings} />
                     <ChosenIngredientsContainer
                         clearIngredients={clearIngredients}
                         selectedIngredients={[...selectedIngredients]}
@@ -56,8 +61,11 @@ function Landing() {
                 </div>
                 <div className='focusArea'>
                     {/* <LoadingAnimation /> */}
-                    <SearchBarWrapper addIngredient={addIngredient} /*setResults={setResults}*/ />
-                    <RecipeListings ShowRecipeListings={ShowRecipeListings} selectedIngredients={[...selectedIngredients]}/>
+                    <SearchBarWrapper 
+                        addIngredient={addIngredient} />
+                    <RecipeListings
+                        recipeListings={recipeListings}
+                        showRecipeListings={showRecipeListings} />
                     <CommonIngredientsContainer />
                 </div>
             </div>
