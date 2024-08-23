@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import Recipelisting from "../recipe_listing";
+import Recipelisting from "./recipe_listing";
 
 
 const API_KEY = '376053c399e94573b8ff03c5a97b16dd';

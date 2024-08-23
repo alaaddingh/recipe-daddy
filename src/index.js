@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './landing_page_comps/header';
-import Footer from './landing_page_comps/footer';
-import Upload from './landing_page_comps/file_upload';
-import FindRecipe from './landing_page_comps/find_recipe';
-import SearchBarWrapper from './landing_page_comps/search_bar_comps/search_bar_wrapper';
-import ChosenIngredientsContainer from './landing_page_comps/your_ingredients_comps/chosen_ingredients_container';
-import CommonIngredientsContainer from './landing_page_comps/common_ingredients_container';
-import LoadingAnimation from './comps/loading_animation';
-import RecipeListings from './comps/recipe_listings';
+import Header from './components/header';
+import Footer from './components/footer';
+import Upload from './components/file_upload';
+import FindRecipe from './components/find_recipe';
+import SearchBarWrapper from './components/search_bar_comps/search_bar_wrapper';
+import ChosenIngredientsContainer from './components/your_ingredients_comps/chosen_ingredients_container';
+import CommonIngredientsContainer from './components/common_ingredients_container';
+import LoadingAnimation from './components/loading_animation';
+import RecipeListings from './components/recipe_listings';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
