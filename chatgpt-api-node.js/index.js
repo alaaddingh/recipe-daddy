@@ -1,60 +1,68 @@
-const axios = require("axios");
-const dotenv = require("dotenv");
-const readline = require("readline");
+const express = require('express');
+const vision = require('@google-cloud/vision');
+const path = require('path');
+const fs = require('fs');
+const dotenv = require('dotenv');
 
 // Load environment variables from .env file
 dotenv.config();
 
-// OpenAI API key and project ID
-const apiKey = process.env.OPENAI_API_KEY;
-const projectId = process.env.PROJECT_ID;
-
-// Function to call the ChatGPT API
-async function callChatGPT(prompt) {
-    const url = "https://api.openai.com/v1/chat/completions";
-
-    const headers = {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-        // Include project ID in headers if necessary
-        'OpenAI-Project-Id': projectId,
-    };
-
-    const data = {
-        model: "gpt-3.5-turbo",
-        messages: [
-            { role: "system", content: "You are a helpful assistant." },
-            { role: "user", content: prompt },
-        ],
-    };
-
-    try {
-        const response = await axios.post(url, data, { headers });
-        const result = response.data.choices[0].message.content;
-        return result;
-    } catch (error) {
-        console.error(
-            "Error calling ChatGPT API:",
-            error.response ? error.response.data : error.message
-        );
-        throw error;
-    }
-}
-
-// Create an interface for user input
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
+// Create a Vision API client with your JSON key file
+const client = new vision.ImageAnnotatorClient({
+    keyFilename: path.resolve(__dirname, 'decent-courage-433422-b6-7b9e2bcfc455.json')
 });
 
-// Prompt the user for input
-rl.question("Enter your input: ", async (prompt) => {
+// Express setup
+const app = express();
+
+// Endpoint to process a local image file
+app.get('/process-image', async (req, res) => {
+    console.log('Received request for /process-image');
     try {
-        const response = await callChatGPT(prompt);
-        console.log("ChatGPT response:", response);
+        console.log('Analyzing image...');
+
+        // Specify the path to your local image file
+        const imagePath = path.resolve(__dirname, '..', 'src', 'images', 'IMG_3052(1).jpg');
+        console.log('Resolved image path:', imagePath);
+
+        // Check if file exists
+        if (!fs.existsSync(imagePath)) {
+            console.error('Image file does not exist:', imagePath);
+            res.status(500).send('Image file does not exist');
+            return;
+        }
+
+        console.log('Image file exists. Proceeding with label detection.');
+
+        // Analyze the image using Google Cloud Vision API
+        const [result] = await client.labelDetection(imagePath);
+        console.log('Label detection result:', JSON.stringify(result, null, 2));
+
+        const labels = result.labelAnnotations.map(label => label.description);
+        const scores = result.labelAnnotations.map(label => label.score);
+
+        // Log detailed information about detected labels
+        labels.forEach((label, index) => {
+            console.log(`Label ${index + 1}: ${label}, Confidence Score: ${scores[index]}`);
+        });
+
+        if (labels.length === 0) {
+            console.log('No labels found.');
+        }
+
+        const ingredients = labels.join(', ');
+        console.log('Ingredients:', ingredients);
+
+        // Send the results back to the client
+        res.json({ ingredients });
     } catch (error) {
-        console.error("Error:", error.message);
-    } finally {
-        rl.close();
+        console.error('Error processing image:', error);
+        res.status(500).send('Error processing image');
     }
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
