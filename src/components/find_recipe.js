@@ -25,10 +25,10 @@ function FindRecipe({ setShowRecipeListings, selectedIngredients, setRecipeListi
     }    
 
     return (
-        <div>
+        <div className="find-a-recipe">
             <button 
                 onClick={() => returnRecipesFunction()}
-                className="find-a-recipe">
+                >
                 FIND A RECIPE
             </button>
         </div>
