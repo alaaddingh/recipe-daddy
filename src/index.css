@@ -355,7 +355,8 @@ input[type="file"] {
 }
 
 .recipe-listing > img {
-  width: auto;
+  /* width: auto; */
+  
   border-radius: 6px;
 }
 
