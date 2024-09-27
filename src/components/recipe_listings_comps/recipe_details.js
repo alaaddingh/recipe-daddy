@@ -3,9 +3,8 @@ import React, { useEffect, useState } from 'react';
 function RecipeDetails({ recipeId }) {
     const [recipeDetails, setRecipeDetails] = useState(null);
     // const SPOONACULAR_API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // carlosfvargas account
-    // const SPOONACULAR_API_KEY = '5267f1c8f473448da83ecb677cc12a6b'; // topartist account
-    const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
-    
+    const SPOONACULAR_API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // topartist account
+
     useEffect(() => {
         const fetchRecipeDetails = () => {
             const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${SPOONACULAR_API_KEY}`;
@@ -28,9 +27,8 @@ function RecipeDetails({ recipeId }) {
 
     return (
         <div>
-            <h2>{recipeDetails.title}</h2>
             <a href={recipeDetails.spoonacularSourceUrl} target="_blank" rel="noopener noreferrer">
-                <img src={recipeDetails.image} alt={recipeDetails.title} style={{ cursor: 'pointer' }} />
+                <p>Recipe link</p>
             </a>
             <p>{recipeDetails.summary.replace(/<[^>]*>?/gm, '')}</p> {/* Remove HTML tags from summary */}
         </div>

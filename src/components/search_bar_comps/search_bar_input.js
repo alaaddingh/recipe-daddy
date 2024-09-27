@@ -3,7 +3,10 @@ import { FaSearch } from 'react-icons/fa'; /* search icon from react icons */
 import "../../index.css";
 
 // Replace 'YOUR_API_KEY' with your actual Spoonacular API key
-const API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // Carlos' api key
+// const SPOONACULAR_API_KEY = '376053c399e94573b8ff03c5a97b16dd'; 
+// calrosfvargas account
+const SPOONACULAR_API_KEY = '5267f1c8f473448da83ecb677cc12a6b'; 
+// topartist account
 const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 
 export const SearchBarInput = ({ setResults, setShowResultsList }) => {
@@ -15,7 +18,7 @@ export const SearchBarInput = ({ setResults, setShowResultsList }) => {
             return;
         }
 
-        const url = `${API_URL}?query=${encodeURIComponent(value)}&apiKey=${API_KEY}`;
+        const url = `${API_URL}?query=${encodeURIComponent(value)}&apiKey=${SPOONACULAR_API_KEY}`;
 
         fetch(url)
             .then((response) => response.json())
