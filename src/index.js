@@ -46,28 +46,31 @@ function Landing() {
     return (
         <div>
             <Header />
-            <div className='Mainbody'>
-                <div className='sideBar'>
-                    <Upload />
-                    <FindRecipe
-                        setShowRecipeListings={setShowRecipeListings}
-                        selectedIngredients={[...selectedIngredients]}
-                        setRecipeListings={setRecipeListings} />
-                    <ChosenIngredientsContainer
-                        clearIngredients={clearIngredients}
-                        selectedIngredients={[...selectedIngredients]}
-                        removeIngredient={removeIngredient}
-                    />
-                </div>
-                <div className='focusArea'>
-                    {/* <LoadingAnimation /> */}
-                    <SearchBarWrapper 
-                        addIngredient={addIngredient} />
-                    <RecipeListingsContainer
-                        recipeListings={recipeListings}
-                        showRecipeListings={showRecipeListings} />
-                    <CommonIngredientsContainer
-                        showRecipeListings={showRecipeListings} />
+            <div className='mainbody-border'>
+                <div className='Mainbody'>
+                    <div className='sideBar'>
+                        <Upload />
+                        <FindRecipe
+                            setShowRecipeListings={setShowRecipeListings}
+                            selectedIngredients={[...selectedIngredients]}
+                            setRecipeListings={setRecipeListings} />
+                        <ChosenIngredientsContainer
+                            clearIngredients={clearIngredients}
+                            selectedIngredients={[...selectedIngredients]}
+                            removeIngredient={removeIngredient}
+                        />
+                    </div>
+                    <div className='focusArea'>
+                        {/* <LoadingAnimation /> */}
+                        <SearchBarWrapper
+                            addIngredient={addIngredient} />
+                        <RecipeListingsContainer
+                            recipeListings={recipeListings}
+                            showRecipeListings={showRecipeListings} />
+                        {/* Common ingredients will be added manually */}
+                        <CommonIngredientsContainer
+                            showRecipeListings={showRecipeListings} />
+                    </div>
                 </div>
             </div>
             <Footer />

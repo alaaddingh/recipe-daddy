@@ -5,28 +5,21 @@ function Header() {
     return (
         <nav>
             <header>
-                <p>logo</p>
-                {/* <img src="https://static.vecteezy.com/system/resources/previews/023/527/583/original/spoon-and-fork-black-icon-symbol-sign-design-transparent-background-free-png.png" width="80px" alt="logo" /> */}
-                <p className="nav--logotext">Recipe Daddy</p>
-                <div className="nav-icons">
-                    {/* Replace **USER ICON** and **NAV ICON** placeholders with actual icons */}
-                    <span className="user-icon">**USER ICON**</span>
-                    <Navbar />
-                </div>
+                <h1>Recipe Daddy</h1>
             </header>
         </nav>
     );
 }
 
-function Navbar() {
-    return (
-        <div className='hamburger-box'>
-            <div className='hamburger-line'></div>
-            <div className='hamburger-line'></div>
-            <div className='hamburger-line'></div>
-        </div>
-    );
-}
+// function Navbar() {
+//     return (
+//         <div className='hamburger-box'>
+//             <div className='hamburger-line'></div>
+//             <div className='hamburger-line'></div>
+//             <div className='hamburger-line'></div>
+//         </div>
+//     );
+// }
 
 
 
