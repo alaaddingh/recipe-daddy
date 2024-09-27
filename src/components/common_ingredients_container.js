@@ -8,14 +8,15 @@ const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 function CommonIngredientsContainer({ showRecipeListings }) {
     return (
         <div>
-            {!showRecipeListings &&
+            { !showRecipeListings &&
                 <div className='common-ingredients-container'>
-                    <CommonIngredientsCategory categoryName={"Fruit"} />
+                    <p>Start searching!</p>
+                    {/* <CommonIngredientsCategory categoryName={"Fruit"} />
                     <CommonIngredientsCategory categoryName={"Pantry"} />
                     <CommonIngredientsCategory categoryName={"Baking"} />
                     <CommonIngredientsCategory categoryName={"Meats"} />
                     <CommonIngredientsCategory categoryName={"Eats"} />
-                    <CommonIngredientsCategory categoryName={"Meats"} />
+                    <CommonIngredientsCategory categoryName={"Meats"} /> */}
                 </div>}
         </div>
     );
