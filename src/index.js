@@ -44,10 +44,10 @@ function Landing() {
     };
 
     return (
-        <div>
+        <div className='everything-container'>
             <Header />
             <div className='mainbody-border'>
-                <div className='Mainbody'>
+                <div className='mainbody'>
                     <div className='sideBar'>
                         <Upload />
                         <FindRecipe
