@@ -1,8 +1,8 @@
 # Recipe Daddy 
 *Recipe finder*
 
-# ⭐️ Purpose 
-Ala’addin and I started this project as a way to teach ourselves the react framework from scratch. Although a better version of our website already exists (recipecook) We thought that this would be a good challenge to incorporate using API’s for the first time, working with ChatGPT, user databases and connecting them to the front and using our custom API’s. 
+# ⭐️ Project's Purpose 
+Ala’addin and I (Carlos) started this project as a way to teach ourselves the react framework from scratch. Although a better version of our website already exists (recipecook) We thought that this would be a good challenge to incorporate using API’s for the first time, working with ChatGPT, user databases and connecting them to the front and using our custom API’s. 
 
 # 👨🏻‍🏫 About
 This website gives you a break on finding the recipe for the night. You upload a photo of your fridge and get a list of recipes that you can make in return. Or alternatively, you can search and pick your ingredients.
