@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to right, #ecf3ea, #f2feeb);
+  background: linear-gradient(to right, #f7fcf5, #f2feeb);
 }
 
 header,
@@ -84,7 +84,7 @@ a:hover {
   min-height: 68vh;
   display: flex;
   flex-direction: row;
-  background-color: #d3e3ee;
+  background-color: #e4edf3;
   border-radius: 10px;
   padding: 20px;
   /* margin: 1em; */
@@ -92,8 +92,8 @@ a:hover {
 
 .mainbody-border {
   border-radius: 10px;
-  background: linear-gradient(to right, #d0e8dc, #ebfaf5);
-  padding: 3px;
+  background: linear-gradient(to right, #ecfff5, #eefff9);
+  padding: 2px;
   margin: 1em;
 }
 
@@ -211,6 +211,7 @@ input[type="file"] {
   width: 100%;
   margin: 0 0.5em;
   font-size: 16px;
+  z-index: 1000;
 }
 
 .input-box input::placeholder {
