@@ -22,5 +22,5 @@ After cloning:
 ## Download Appropriate Packages 
 1. openai:  ```npm install openai```
 2. node.js: ```npm install node```
-3. **Run node server from root dir:** ```node --require dotenv/config chatgpt-api-node.js/index.js```
+3. **Run node server from *chatpgt-api-node.js* dir:** ```node --require dotenv/config index.js```
 4. **Start the UI from root dir:** ```npm start```
