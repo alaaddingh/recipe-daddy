@@ -1,4 +1,5 @@
 import React from 'react';
+import refrigDaddy from './../images/refrig dude.png';
 // import CommonIngredientsCategory from './common_ingredients_category';
 
 
@@ -9,9 +10,12 @@ const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 function CommonIngredientsContainer({ showRecipeListings }) {
     return (
         <div>
-            { !showRecipeListings &&
+            {!showRecipeListings &&
                 <div className='common-ingredients-container'>
-                    <p>Start searching!</p>
+                    <div>
+                        <img id='refrigDaddy' src={refrigDaddy}></img>
+                        <p>"Find yourself some recipes!"</p>
+                    </div>
                     {/* <CommonIngredientsCategory categoryName={"Fruit"} />
                     <CommonIngredientsCategory categoryName={"Pantry"} />
                     <CommonIngredientsCategory categoryName={"Baking"} />

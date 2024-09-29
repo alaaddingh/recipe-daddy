@@ -376,12 +376,35 @@ input[type="file"] {
 
 /* COMMON INGREDIENTS CONTAINER */
 .common-ingredients-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 15px;
   width: 100%;
   margin: 10px 0;
-  z-index: 1;
+  z-index: 1; */
+  
+  /* delete the following when you add the actual common ingredients */
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.common-ingredients-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto; 
+  width: 220px;
+  height: 150px;
+  font-size: 9pt;
+}
+
+#refrigDaddy {
+  width: 150px;
+  height: 150px;
+  margin: auto;
 }
 
 
