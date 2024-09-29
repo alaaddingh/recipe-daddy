@@ -28,7 +28,7 @@ function SearchBarWrapper({ addIngredient }) {
 
 
     return (
-        <div className='search-bar-container' ref={wrapperRef}>
+        <div className='search-bar-wrapper' ref={wrapperRef}>
             <SearchBarInput
                 setResults={setResults}
                 setShowResultsList={setShowResultsList}

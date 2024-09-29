@@ -60,15 +60,16 @@ a:hover {
 
 
 
+
 /* NAVIGATION ICONS */
 .hamburger-line {
   background-color: white;
-  /* background-color: black; */
   height: 2px;
   width: 1.3em;
   margin: 0 0 0.25em 0;
   border-radius: 1em;
 }
+
 
 
 
@@ -99,6 +100,7 @@ a:hover {
 
 
 
+
 /* FOCUS AREA */
 .focusArea {
   width: 100%;
@@ -114,8 +116,9 @@ a:hover {
 
 
 
-/* Container for buttons */
-.Mainbody>buttons {
+
+/* CONTAINER FOR LEFT-SIDE BUTTONS */
+.Mainbody > buttons {
   display: inline-block;
   align-items: center;
 }
@@ -123,6 +126,7 @@ a:hover {
 .buttons--toprow {
   display: flex;
 }
+
 
 
 
@@ -137,7 +141,7 @@ input[type="file"] {
   display: block;
   margin-bottom: 15px;
   cursor: pointer;
-  background-color: #ededed;
+  background-color: #e8e8e8;
   color: black;
   border: none;
   border-radius: 4px;
@@ -159,6 +163,7 @@ input[type="file"] {
 .file-upload {
   padding: 5% 0;
 }
+
 
 
 
@@ -187,6 +192,7 @@ input[type="file"] {
   background-color: #29423a;
   border-radius: 4px;
 }
+
 
 
 
@@ -220,6 +226,7 @@ input[type="file"] {
 
 
 
+
 /* CHOSEN INGREDIENTS TEXT */
 .chosen-ingreds-text {
   display: flex;
@@ -241,11 +248,13 @@ input[type="file"] {
 
 
 
+
 /* CHOSEN INGREDIENTS LIST ITEMS */
 .chosen-ingreds-list {
   display: flex;
   flex-wrap: wrap;
 }
+
 
 
 
@@ -275,20 +284,14 @@ input[type="file"] {
 
 
 
-/* SEARCH BAR CONTAINER */
-.search-bar-container {
-  width: auto;
-}
-
-
 
 /* SEARCH RESULTS LIST */
 .results-list {
-  position: relative;
+  position: fixed;
+  width: calc(100% - 223px - 99px);
   background-color: white;
   border-radius: 6px;
-  padding: 3px;
-  z-index: 2;
+  z-index: 10;
 }
 
 .results-list:hover {
@@ -306,82 +309,54 @@ input[type="file"] {
 
 
 
-/* COMMON INGREDIENTS CONTAINER */
-.common-ingredients-container {
-  position: absolute;
-  top: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px 0;
-  z-index: 1;
-
-  /* delete the following styling when Common Ingredients are finally added */
-  width: 76%;
-  height: 80%;
-  align-items: center;
-  justify-content: center;
-  color: rgba(149, 149, 149, 0.524);
-}
-
-.common-ingredients-container > p { 
-  text-shadow: 0 0 14px rgb(255, 255, 255);
-}
-
-
-
-/* COMMON INGREDIENTS CATEGORY */
-.common-ingredients-category {
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  width: 20vw;
-  height: 30vh;
-  border-radius: 8px;
-  padding: 5px;
-  margin: 10px 10px 0 0;
-}
-
-.common-ingredients-category>p {
-  line-height: 12pt;
-  letter-spacing: 0.4pt;
-  background-color: #4b5552;
-  color: white;
-  padding: 5px;
-  border-radius: 4px;
-  margin: 0;
-}
-
-
 
 /* RECIPE LISTINGS CONTAINER */
 .recipe-listings-container {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  width: 100%;
   margin-top: 10px;
-  /* margin: 0 -10px;  */
+  z-index: 1;
 }
+
 
 
 
 /* INDIVIDUAL RECIPE LISTINGS */
 .recipe-listing {
-  flex: 1;
   background-color: white;
   padding: 5px;
   border-radius: 8px;
   max-width: 400px;
   align-items: center;
+  box-shadow: 2px 2px 6px 3px #3a3a3a28;
 }
 
-.recipe-listing>img {
-  /* width: auto; */
-
+.recipe-listing > img {
+  width: 100%;
   border-radius: 6px;
 }
 
-.recipe-listing>p {
-  margin: 0;
+.recipe-listing > h2 {
+  margin: 7px;
+  font-size: 12pt;
 }
+
+.recipe-details {
+  margin: 7px;
+  font-size: 11pt;
+}
+
+.recipe-details > a:hover { 
+  color: #1c8398;
+}
+
+.recipe-details > a {
+  color: #0b505e;
+  font-weight: bold;
+}
+
 
 
 
@@ -397,33 +372,36 @@ input[type="file"] {
 }
 
 
-/* LOADING ANIMATION */
-/* .loading-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+
+/* COMMON INGREDIENTS CONTAINER */
+.common-ingredients-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+  width: 100%;
+  margin: 10px 0;
+  z-index: 1;
 }
 
-.dot {
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
-  background-color: #3498db;
-  border-radius: 50%;
-  animation: bounce 0.6s infinite alternate;
+
+
+
+/* COMMON INGREDIENTS CATEGORY */
+.common-ingredients-category {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 30vh;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px 10px 0 0;
 }
 
-.dot:nth-child(2) {
-  animation-delay: 0.2s;
+.common-ingredients-category > p {
+  line-height: 12pt;
+  letter-spacing: 0.4pt;
+  background-color: #4b5552;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 0;
 }
-
-.dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bounce {
-  to {
-    transform: translateY(-15px);
-  }
-}
- */

@@ -11,7 +11,7 @@ function Recipelisting({ data_prop }) {
             onClick={() => setShowDetails(!showDetails)}
             style={{ cursor: 'pointer' }}>
             <img src={data_prop.image} alt={data_prop.title} />
-            <p>{data_prop.title}</p>
+            <h2>{data_prop.title}</h2>
             {showDetails && (
                 <div>
                     <RecipeDetails recipeId={data_prop.id} />
