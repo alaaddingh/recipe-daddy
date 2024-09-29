@@ -3,8 +3,8 @@ import React from 'react';
 
 
 
-const API_KEY = REACT_APP_SPOONACULAR_API_KEY
-// const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
+const API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY
+const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 
 function CommonIngredientsContainer({ showRecipeListings }) {
     return (

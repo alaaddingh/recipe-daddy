@@ -27,7 +27,7 @@ function RecipeDetails({ recipeId }) {
     return (
         <div>
             <a href={recipeDetails.spoonacularSourceUrl} target="_blank" rel="noopener noreferrer">
-                <p style={"cursor:pointer"}>Recipe link</p>
+                <p style={{cursor:'pointer'}}>Recipe link</p>
             </a>
             <p>{recipeDetails.summary.replace(/<[^>]*>?/gm, '')}</p> {/* Remove HTML tags from summary */}
         </div>
