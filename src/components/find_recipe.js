@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import "../index.css";
 
-// const SPOONACULAR_API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // carlosfvargas account
-const SPOONACULAR_API_KEY = '5267f1c8f473448da83ecb677cc12a6b'; // topartist account
+const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 const API_URL = 'https://api.spoonacular.com/recipes/findByIngredients';
 
 function FindRecipe({ setShowRecipeListings, selectedIngredients, setRecipeListings }) {

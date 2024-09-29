@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function RecipeDetails({ recipeId }) {
     const [recipeDetails, setRecipeDetails] = useState(null);
-    // const SPOONACULAR_API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // carlosfvargas account
-    const SPOONACULAR_API_KEY = '376053c399e94573b8ff03c5a97b16dd'; // topartist account
+    const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
     useEffect(() => {
         const fetchRecipeDetails = () => {
@@ -28,7 +27,7 @@ function RecipeDetails({ recipeId }) {
     return (
         <div>
             <a href={recipeDetails.spoonacularSourceUrl} target="_blank" rel="noopener noreferrer">
-                <p>Recipe link</p>
+                <p style={"cursor:pointer"}>Recipe link</p>
             </a>
             <p>{recipeDetails.summary.replace(/<[^>]*>?/gm, '')}</p> {/* Remove HTML tags from summary */}
         </div>
@@ -36,3 +35,15 @@ function RecipeDetails({ recipeId }) {
 }
 
 export default RecipeDetails;
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,7 +13,7 @@ dotenv.config();
 
 // Define the Spoonacular API URL and key
 const SPOONACULAR_API_URL = 'https://api.spoonacular.com/recipes/complexSearch';
-const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
+const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 // Initialize APIs
 const client = new vision.ImageAnnotatorClient({

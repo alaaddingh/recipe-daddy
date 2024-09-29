@@ -1,7 +1,7 @@
 /* individual reciope listing */
 
 import React, { useState } from "react";
-import RecipeDetails from "../recipe_details";
+import RecipeDetails from "./recipe_details";
 
 function Recipelisting({ data_prop }) {
     const [showDetails, setShowDetails] = useState(false);
