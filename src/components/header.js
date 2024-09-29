@@ -11,16 +11,5 @@ function Header() {
     );
 }
 
-// function Navbar() {
-//     return (
-//         <div className='hamburger-box'>
-//             <div className='hamburger-line'></div>
-//             <div className='hamburger-line'></div>
-//             <div className='hamburger-line'></div>
-//         </div>
-//     );
-// }
-
-
 
 export default Header;
