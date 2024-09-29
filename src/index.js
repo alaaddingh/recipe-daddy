@@ -8,7 +8,6 @@ import FindRecipe from './components/find_recipe';
 import SearchBarWrapper from './components/search_bar_comps/search_bar_wrapper';
 import ChosenIngredientsContainer from './components/your_ingredients_comps/chosen_ingredients_container';
 import CommonIngredientsContainer from './components/common_ingredients_container';
-import LoadingAnimation from './components/loading_animation';
 import RecipeListingsContainer from './components/recipe_listings_comps/recipe_listings_container';
 // Mother File
 
