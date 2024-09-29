@@ -17,7 +17,7 @@ const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
 
 // Initialize APIs
 const client = new vision.ImageAnnotatorClient({
-    keyFilename: path.resolve(__dirname, 'decent-courage-433422-b6-b704c284c933.json')
+    keyFilename: path.resolve(__dirname, 'decent-courage-433422-b6-4df4691db92d.json')
 });
 
 const openai = new OpenAI({

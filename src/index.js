@@ -48,7 +48,9 @@ function Landing() {
             <div className='mainbody-border'>
                 <div className='mainbody'>
                     <div className='sideBar'>
-                        <Upload />
+                        <Upload
+                            setRecipeListings={setRecipeListings}
+                            setShowRecipeListings={setShowRecipeListings} />
                         <FindRecipe
                             setShowRecipeListings={setShowRecipeListings}
                             selectedIngredients={[...selectedIngredients]}
