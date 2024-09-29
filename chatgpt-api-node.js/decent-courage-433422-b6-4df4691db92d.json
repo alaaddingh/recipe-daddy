@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "decent-courage-433422-b6",
+  "private_key_id": "4df4691db92dd81889da8623e7e2cf75359a1977",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCc3LEOQfDhu2mQ\n8pqQS1pu56j8IGnoXhT+mEQz3aKGpelcDXOEkKldi+/Hk91VnRHK9s/B/lBtfMJ9\nI6jSskQHfpZyH564eI0YiBeMaEfPnlfecciddfu9dvTR4YIIbluB/o92+iPO+csH\nELXSPGGG095+jceCu2QQI4OUUWWet9BSpFbjWrID+vkg+ZndIj27cYQFiFnzypWF\ndxzJpxjqJW2+aJnOS/JSWUeysrHHHKx6JYXG0uLqZWpinhrnR5JBxCxdXkehVjXW\nF5DqRNnoUuxbo0x/hRdPZAR0fheReyDtnv0X9n11AJYwoZJ+ZUvc/Id/NuUAsq4Y\nwS0i4Ul9AgMBAAECggEAJZY1P+EZnwFpI5AabMJ9ni8Y/ScoMYOfvLzQNOxiBikp\n0IKxoD2Is891ConaIqpjKdL3x/iQHZgkQ1eg27HXHsOcuaZtgi7ywkLT/7M6J9v9\nmqIBrAdqJcVkFwmV/r6w4yaUCnKYU39kAKKmqsSIqwXIHeOLv7321W4pGIhjlQL/\nFvbf7z58AC5jYnes+Xj5zJiY9GEy2RFkZdjyOQv4eZUpQFdqauCQHHFCmcjTPsNl\nwn/X0fjGW3j3GTx1eM3Dp+xvr6mpzPwP60XN1GjG3xIbtldSqfZTC+jsJpmNnR+X\nyKeaCWDVrjk3clLkl+5lkSsWpc+JihMBe5bRyh1NqQKBgQDLIZLsyaOZLnGs7AJt\nHDtps+fuoxM8xKEnJJkLKum1Wner++sHBNgcAB02Hx5P4SatqHnsEvwF5FOyakxn\nqbtt6A7Z/j8P/WlXZV6H6A6t+kw1mH520BslHZ20gbRvi+l1loq99XwxVltZrRBA\nuz9xbJIGC9zi/6+496ORJGMx2QKBgQDFsEFrwuSYdFaiczaOrBOusWd+3S3mWDXE\npNDpf06EA2UmtGpM5nZBDrPJ5YWjDRyNjSwhkKZ2QL0EZubXoDwjJjBbrJpbou7f\nHIQeJQKd1U4IrxV6cXicA9hAYTigq7r0iRMaNQ9R1Bc2RQlSmLfp6JQUDwoO0tLZ\nkc4rG+lqRQKBgDzm3wcxWWR24UwoIn4WJdYGQ3Zv3Deu+GYk+eG4RwPBkPm2ePvM\nvwJ+IkP0xoDKj28ngQ5/jqIxl8p5RlkaMYC9P56qNLwVjTzPvqzerXAKCElVZC05\nLbpOC9dvv+plt2Qy83wKmuar7o2Pbr0JpvbZx1oaumowoL3DOX4tu7PZAoGAPEfS\nqxlyu0o+YKrhKAAwwEQ4Wub26BZdzuizC4BWYMroPTUmdOyRgqUJDbd/WIjW/BLg\nMhv5pnV3LbBzE604qT8r38hyCR9V15LKdqaydY5ljSBWXE/dhzVk67y5l8TF7Wse\n+A7V7Q3PRi0m+pi2/Ax/mt47IuoGgXGEfIC2XEECgYAZqBri/AN0PY9ljidgfEJm\n5kjDbSk366VdWpb1EGpGnUDbiTlJvrUJEyH9xsfqr+VErLH8st/oQ7nAUasbDdTO\nWUrqrCryJkaxAgHIBV8Mzlz2bEHnL0SoB6FtpdkM2RR6bEhAGjL2PzwbuS9WvLgq\naupFaUKde/p+Ks3rJ99Ecg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "recipe-diddy@decent-courage-433422-b6.iam.gserviceaccount.com",
+  "client_id": "105027369349185841985",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recipe-diddy%40decent-courage-433422-b6.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

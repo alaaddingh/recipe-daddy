@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 function RecipeDetails({ recipeId }) {
     const [recipeDetails, setRecipeDetails] = useState(null);
-    const API_KEY = '376053c399e94573b8ff03c5a97b16dd';
+    const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
     useEffect(() => {
         const fetchRecipeDetails = () => {
-            const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}`;
+            const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${SPOONACULAR_API_KEY}`;
             fetch(url)
                 .then(response => response.json())
                 .then(data => {

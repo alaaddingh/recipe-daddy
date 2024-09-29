@@ -8,7 +8,6 @@ import FindRecipe from './components/find_recipe';
 import SearchBarWrapper from './components/search_bar_comps/search_bar_wrapper';
 import ChosenIngredientsContainer from './components/your_ingredients_comps/chosen_ingredients_container';
 import CommonIngredientsContainer from './components/common_ingredients_container';
-import LoadingAnimation from './components/loading_animation';
 import RecipeListingsContainer from './components/recipe_listings_comps/recipe_listings_container';
 // Mother File
 
@@ -44,30 +43,35 @@ function Landing() {
     };
 
     return (
-        <div>
+        <div className='everything-container'>
             <Header />
-            <div className='Mainbody'>
-                <div className='sideBar'>
-                    <Upload />
-                    <FindRecipe
-                        setShowRecipeListings={setShowRecipeListings}
-                        selectedIngredients={[...selectedIngredients]}
-                        setRecipeListings={setRecipeListings} />
-                    <ChosenIngredientsContainer
-                        clearIngredients={clearIngredients}
-                        selectedIngredients={[...selectedIngredients]}
-                        removeIngredient={removeIngredient}
-                    />
-                </div>
-                <div className='focusArea'>
-                    {/* <LoadingAnimation /> */}
-                    <SearchBarWrapper 
-                        addIngredient={addIngredient} />
-                    <RecipeListingsContainer
-                        recipeListings={recipeListings}
-                        showRecipeListings={showRecipeListings} />
-                    <CommonIngredientsContainer
-                        showRecipeListings={showRecipeListings} />
+            <div className='mainbody-border'>
+                <div className='mainbody'>
+                    <div className='sideBar'>
+                        <Upload
+                            setRecipeListings={setRecipeListings}
+                            setShowRecipeListings={setShowRecipeListings} />
+                        <FindRecipe
+                            setShowRecipeListings={setShowRecipeListings}
+                            selectedIngredients={[...selectedIngredients]}
+                            setRecipeListings={setRecipeListings} />
+                        <ChosenIngredientsContainer
+                            clearIngredients={clearIngredients}
+                            selectedIngredients={[...selectedIngredients]}
+                            removeIngredient={removeIngredient}
+                        />
+                    </div>
+                    <div className='focusArea'>
+                        {/* <LoadingAnimation /> */}
+                        <SearchBarWrapper
+                            addIngredient={addIngredient} />
+                        <RecipeListingsContainer
+                            recipeListings={recipeListings}
+                            showRecipeListings={showRecipeListings} />
+                        {/* Common ingredients will be added manually */}
+                        <CommonIngredientsContainer
+                            showRecipeListings={showRecipeListings} />
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import "../index.css";
 
-const API_KEY = '376053c399e94573b8ff03c5a97b16dd';
+const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 const API_URL = 'https://api.spoonacular.com/recipes/findByIngredients';
 
 function FindRecipe({ setShowRecipeListings, selectedIngredients, setRecipeListings }) {
     const fetchRecipes = () => {
         console.log('fetching data');
-        const url = `${API_URL}?ingredients=${encodeURIComponent(selectedIngredients.join(','))}&apiKey=${API_KEY}`;
+        const url = `${API_URL}?ingredients=${encodeURIComponent(selectedIngredients.join(','))}&apiKey=${SPOONACULAR_API_KEY}`;
         fetch(url)
             .then((response) => response.json())
             .then((data) => {

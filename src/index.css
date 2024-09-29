@@ -1,29 +1,32 @@
 * {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* src: url('src/fonts/Poppins/Poppins-Regular.ttf'); */
-  /* font-family: 'Playwrite New Zealand';
-  src: url('/fonts/Playwrite_AU_VIC/static/PlaywriteAUVIC-Regular.ttf'); */
-  /* font-family: 'Playwrite New Zealand';
-  src: url('/fonts/Playwrite_AU_VIC/static/PlaywriteAUVIC-Regular.ttf'); */
+  font-family: "Raleway", system-ui;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+  /* font-family: 'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif; */
 }
 
-html {
-  background-color: #8EAF9D;
-}
+
 body {
   margin: 0;
-  background-color: rgb(242, 242, 242);
+  background: linear-gradient(to right, #f7fcf5, #f2feeb);
 }
 
 header,
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: #8EAF9D;
+  background-color: #538059;
   padding: 20px 25px;
   color: white;
-  height: 3em;
 }
 
 nav>h3,
@@ -32,16 +35,16 @@ nav>p {
   margin: 0;
 }
 
-nav>h4 {
-  color: #deebf8;
-  font-weight: 600;
+header {
+  justify-content: center;
 }
 
-header>p {
+header>h1 {
   color: white;
-  /* color: black; */
+  font-family: "Edu AU VIC WA NT Dots", cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   font-size: 2em;
+  line-height: 10pt;
 }
 
 a {
@@ -71,14 +74,28 @@ a:hover {
 
 
 /* MAIN BODY STYLING */
-.Mainbody {
-  min-height: 100vh;
+.everything-container {
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: stretch;
+  justify-content:space-between; */
+}
+
+.mainbody {
+  min-height: 68vh;
   display: flex;
   flex-direction: row;
-  background-color: #B9CDDA;
-  margin: 1em;
+  background-color: #e4edf3;
   border-radius: 10px;
   padding: 20px;
+  /* margin: 1em; */
+}
+
+.mainbody-border {
+  border-radius: 10px;
+  background: linear-gradient(to right, #ecfff5, #eefff9);
+  padding: 2px;
+  margin: 1em;
 }
 
 
@@ -86,13 +103,12 @@ a:hover {
 
 /* FOCUS AREA */
 .focusArea {
-  width: 82%;
+  width: 100%;
 }
 
 
 
-
-/* SIDEBAR */
+/* SIDEBAR AREA*/
 .sideBar {
   width: 230px;
   margin-right: 18px;
@@ -129,7 +145,7 @@ input[type="file"] {
   color: black;
   border: none;
   border-radius: 4px;
-  box-shadow: 0px 4px 7.4px grey;
+  box-shadow: 0px 4px 15px rgba(128, 128, 128, 0.491);
 }
 
 .file-upload>img {
@@ -159,7 +175,7 @@ input[type="file"] {
   width: auto;
   background-color: #3C6154;
   border-radius: 4px;
-  box-shadow: 0px 4px 7.4px grey;
+  box-shadow: 0px 4px 15px grey;
 }
 
 .find-a-recipe > button {
@@ -171,7 +187,7 @@ input[type="file"] {
   border: none;
 }
 
-.find-a-recipe > button:hover {
+.find-a-recipe>button:hover {
   cursor: pointer;
   background-color: #29423a;
   border-radius: 4px;
@@ -187,9 +203,9 @@ input[type="file"] {
   width: auto;
   height: 2em;
   padding: 0 0.5em;
-  border: 1px solid black;
+  border: 1px solid #e3ebe6;
   border-radius: 6px;
-  background-color: #D7DAE5;
+  background-color: white;
   min-width: 2em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -197,10 +213,11 @@ input[type="file"] {
 .input-box input {
   border: none;
   outline: none;
-  background-color: #D7DAE5;
+  background-color: inherit;
   width: 100%;
   margin: 0 0.5em;
   font-size: 16px;
+  z-index: 1000;
 }
 
 .input-box input::placeholder {
@@ -214,7 +231,7 @@ input[type="file"] {
 .chosen-ingreds-text {
   display: flex;
   color: black;
-  margin-top: 7%;
+  margin-top: 15px;
   font-size: 8pt;
   justify-content: space-between;
 }
@@ -246,16 +263,16 @@ input[type="file"] {
   list-style-type: none;
   background-color: white;
   width: fit-content;
-  padding: 0 0.6em;
-  margin: 0.2em;
+  padding: 6px 10px;
+  margin: 2.5px;
   border-radius: 3em;
   font-size: pt;
-  line-height: 19pt;
+  line-height: 15pt;
   border: none;
 }
 
 .ingredient:hover {
-  background-color: grey;
+  background-color: #c79090;
   cursor: pointer;
   color: white;
 }
@@ -279,15 +296,15 @@ input[type="file"] {
 
 .results-list:hover {
   cursor: pointer;
-}  
+}
 
-.results-list > div {
-  padding: 3px 10px;
+.results-list>div {
+  padding: 5px 10px;
   border-radius: 6px;
 }
 
-.results-list > div:hover {
-  background-color: #D9D9D9;
+.results-list>div:hover {
+  background-color: #e3ebe6;
 }
 
 
@@ -342,34 +359,16 @@ input[type="file"] {
 
 
 
-/* LOADING ANIMATION */
-.loading-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* SOCIAL ICONS */
+.developer-socials {
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-.dot {
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
-  background-color: #3498db;
-  border-radius: 50%;
-  animation: bounce 0.6s infinite alternate;
-}
-
-.dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bounce {
-  to {
-    transform: translateY(-15px);
-  }
+.social-icons {
+  color: white;
+  margin: 0 8px;
 }
 
 

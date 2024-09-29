@@ -2,20 +2,22 @@ import React from 'react';
 // import CommonIngredientsCategory from './common_ingredients_category';
 
 
-const API_KEY = '376053c399e94573b8ff03c5a97b16dd';
+
+const API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY
 const API_URL = 'https://api.spoonacular.com/food/ingredients/search';
 
 function CommonIngredientsContainer({ showRecipeListings }) {
     return (
         <div>
-            {!showRecipeListings &&
+            { !showRecipeListings &&
                 <div className='common-ingredients-container'>
-                    <CommonIngredientsCategory categoryName={"Fruit"} />
+                    <p>Start searching!</p>
+                    {/* <CommonIngredientsCategory categoryName={"Fruit"} />
                     <CommonIngredientsCategory categoryName={"Pantry"} />
                     <CommonIngredientsCategory categoryName={"Baking"} />
                     <CommonIngredientsCategory categoryName={"Meats"} />
                     <CommonIngredientsCategory categoryName={"Eats"} />
-                    <CommonIngredientsCategory categoryName={"Meats"} />
+                    <CommonIngredientsCategory categoryName={"Meats"} /> */}
                 </div>}
         </div>
     );
