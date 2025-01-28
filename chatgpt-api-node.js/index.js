@@ -17,7 +17,7 @@ const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 // Initiate API's 
 const client = new vision.ImageAnnotatorClient({
-    keyFilename: path.resolve(__dirname, process.env.GOOGLE_KEY_FILE)
+    keyFilename: path.resolve(__dirname, "caramel-feat-438413-s5-e2c4662abc5e.json")
 });
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 

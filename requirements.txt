@@ -1,0 +1,12 @@
+From main directory
+
+node packages
+express
+vision from @google-cloud/vision
+path
+fs
+dotenv
+{ OpenAI } from openai
+multer
+cors
+axios
