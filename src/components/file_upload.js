@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import "../index.css";
+import axios from 'axios';
 
 function Upload({ setRecipeListings, setShowRecipeListings }) {
     const [file, setFile] = useState(null);
 
     const handleFileChange = async (event) => {
+
         const selectedFile = event.target.files[0];
         setFile(selectedFile);
 
@@ -13,12 +15,15 @@ function Upload({ setRecipeListings, setShowRecipeListings }) {
             const formData = new FormData();
             formData.append('file', selectedFile);
 
+            console.log("FormData sent:", formData.get("file")); // debugging 
+
             try {
-                const response = await fetch('http://localhost:3000/upload', { 
+                const response = await fetch('http://localhost:3001/upload', { 
                     method: 'POST',
                     body: formData
                 });
 
+                // console.log('Response: ', response.ok);
                 if (response.ok) {
                     const result = await response.json();
                     console.log('Upload successful:', result);
