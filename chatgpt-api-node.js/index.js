@@ -14,11 +14,10 @@ dotenv.config();
 // Define the API's and URL's
 const SPOONACULAR_API_URL = 'https://api.spoonacular.com/recipes/complexSearch';
 const SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
-const GOOGLE_VISION_API_KEY = process.env.GOOGLE_VISION_API_KEY;
 
 // Initiate API's 
 const client = new vision.ImageAnnotatorClient({
-    keyFilename: path.resolve(__dirname, 'caramel-feat-438413-s5-eeb8e40ca4e7.json')
+    keyFilename: path.resolve(__dirname, process.env.GOOGLE_KEY_FILE)
 });
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
