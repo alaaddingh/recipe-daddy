@@ -19,8 +19,10 @@ This website gives you a break on finding the recipe for the night. You upload a
 
 # 📦 Installation guide
 After cloning: 
+## Required Packages
+From main directory: 
+npm install node express @google-cloud/vision path fs dotenv openai multer cors axios
 ## Download Appropriate Packages 
-1. openai:  ```npm install openai```
-2. node.js: ```npm install node```
-3. **Run node server from *chatpgt-api-node.js* dir:** ```node --require dotenv/config index.js```
-4. **Start the UI from root dir:** ```npm start```
+1. Install required packages
+2. **Run node server from *chatpgt-api-node.js* dir:** ```node --require dotenv/config index.js```
+3. **Start the UI from root dir:** ```npm start```
