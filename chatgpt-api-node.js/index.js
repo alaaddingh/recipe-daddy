@@ -23,7 +23,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 
 // Set up multer for file upload handling
-const upload = multer({ dest: path.join(__dirname, 'upload') });
+const upload = multer({ dest: path.join(__dirname, '/api/upload') });
 
 // Middleware
 const app = express();
@@ -34,7 +34,7 @@ app.use(cors());
 
 
 // Upload endpoint
-app.post('/upload', upload.single('file'), async (req, res) => {
+app.post('/api/upload', upload.single('file'), async (req, res) => {
     console.log('==> Received file upload request');
 
     const filePath = req.file.path;
@@ -45,7 +45,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
         if (!fs.existsSync(filePath)) {
             console.error('==> Image file does not exist:', filePath);
-            res.status(500).send('==> Image file does not exist');
+            res.status(404).send('==> Image file does not exist');
             return;
         }
 
@@ -89,7 +89,10 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             const recipeResponse = await axios.get(recipeUrl);
             recipeResults = recipeResponse.data.results;
         }
-        
+
+        // Remove the uploaded file
+        fs.unlinkSync(filePath)
+
         // Resolve result 
         res.json({
             ingredients: found_obj,
@@ -97,7 +100,6 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             recipes: recipeResults
         });
 
-        fs.unlinkSync(filePath);
     } catch (error) {
         console.error('==> Error processing image:', error);
         res.status(500).send('==> Error processing image');

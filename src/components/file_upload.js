@@ -18,7 +18,7 @@ function Upload({ setRecipeListings, setShowRecipeListings }) {
             console.log("FormData sent:", formData.get("file")); // debugging 
 
             try {
-                const response = await fetch('http://localhost:3001/upload', { 
+                const response = await fetch('http://localhost:3001/api/upload', { 
                     method: 'POST',
                     body: formData
                 });
