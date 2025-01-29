@@ -2,13 +2,16 @@
 
 .env
 
-# dependencies
 /node_modules
 /chatgpt-api-node.js/node_modules
 /.pnp
 .pnp.js
 /chatgpt-api-node.js/caramel*
 caramel*
+/package-lock.json
+/package.json
+/chatgpt-api-node.js/package-lock.json
+/chatgpt-api-node.js/package.json
 
 # testing
 /coverage
