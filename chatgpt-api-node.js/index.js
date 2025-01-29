@@ -69,7 +69,7 @@ app.post('/api/upload', upload.single('file'), async (req, res) => {
         console.log("==> Found objects:", found_obj);
 
         // Using ChatGPT for isolating one food menu item
-        const chatGPTPrompt = `Here is a list of objects detected in an image: ${found_obj.join(', ')}. Please respond only with a food item you have found in this list. If there are multiple food items, please only respond with the very first food item you encounter in the comma-separated list. If you find a more general food item such as "hot dog bun" please respond with "hot dog" as a dish is needed as a response, not an ingredient. If all you find is an ingredient or no food item at all, please respond with "error".`;
+        const chatGPTPrompt = `Here is a list of objects detected in an image: ${found_obj.join(', ')}. Go through the list and please respond only with a WHOLE MEAL you have found in this list. If there are multiple food items, please only respond with the very first MEAL you encounter in the comma-separated list. If all you find is an ingredient or no food item at all, please respond with "error".`;
         const chatGPTResponse = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [{
