@@ -21,7 +21,7 @@ This website gives you a break on finding the recipe for the night. You upload a
 After cloning: 
 ## Required Packages
 From main directory: 
-npm install node express @google-cloud/vision path fs dotenv openai multer cors axios
+`npm install node express @google-cloud/vision path fs dotenv openai multer cors axios`
 ## Download Appropriate Packages 
 1. Install required packages
 2. **Run node server from *chatpgt-api-node.js* dir:** ```node --require dotenv/config index.js```
