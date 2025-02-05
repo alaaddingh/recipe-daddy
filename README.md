@@ -1,5 +1,5 @@
 # Recipe Daddy 
-*Recipe finder*
+*Recipe finder*, for individual ingredients, or photos of your meal.
 
 # Table of Contents 
 1. [Project's Purpose](#️-projects-purpose)
